@@ -1,0 +1,57 @@
+STRING TESTS
+
+	1. [ string1 = string2 ] 	- string1 is the same as string2
+	2. [ string1 == string2 ]	- Same as above, but with two "=="
+	3. [ string1 != string2 ]	- string1 is NOT the same as string2
+	4. [ string ]			- string is NOT NULL - simply tests to see if string exists
+	5. [ -n string ]		- Tests to see if string length is NON-zero
+	6. [ -z string ]		- Tests to see if the sring length IS zero
+	7. [ -l string ]		- Tests to see what the length of the string is in characters
+
+LOGICAL STRING TESTS
+
+	1. [ string1 -a string2 ]	- Tests to see if BOTH string1 AND string2 are true
+	2. [ string1 -o string2 ]	- Tests to see if EITHER string1 OR string2 are true
+	3. [ ! string1 ]		- Does NOT match string1
+
+LOGICAL COMPOUND TESTING
+	
+	1. [[ pattern1 && patern2 ]]	- BOTH pattern1 AND pattern2 are true
+	2. [[ pattern1 || pattern2 ]]	- EITHER pattern1 OR pattern2 is true
+	3. [[ ! pattern ]]		- pattern does NOT match
+
+INTEGER TESTS
+
+	1. [ int1 -eq int2 ]		- int1 is equal to int2
+	2. [ int1 -ne int2 ]		- int1 is NOT equal to int2
+	3. [ int1 -gt int2 ]		- int1 is greater than int2
+	4. [ int1 -lt int2 ]		- int1 is less than int2
+	5. [ int1 -ge int2 ]		- int1 is greater than OR equal to int2
+	6. [ int1 -le int2 ]		- int1 is less than OR equal to int2
+
+BINARY OPERATORS FOR FILES
+
+	1. [ file1 -nt file2 ]		- True if file1 is newer than file2 (per the modification date)
+	2. [ file1 -ot file2 ]		- True if file1 is older than file2
+	3. [ file1 -ef file2 ]		- True if file1 and fiile1 have the same device or inode number (hard link)
+
+FILE TESTING OPERATORS
+	TEST				Test is TRUE if...
+	1. -b filename			The file is a BLOCK special file
+	2. -x filename			The file is an EXECUTABLE file
+	3. -c filename			The file is a CHARACTER special file
+	4. -w filename			The file is a WRITEABLE file
+	5. -d filename			The file is a DIRECTORY file
+	6. -u filename			The file has the SET-USER-ID bit on
+	7. -e filename			The file exists
+	8. -t fd			The fd (file descriptor) is opened on a terminal
+	9. -f filename			The file is a REGULAR file and it exists
+	10. -s filename			The file is NON-ZERO in size
+	11. -S filename			The file is s SOCKET file
+	12. -G filename			True if the file exists AND is owned by the effective GROUP ID
+	13. -g filename			True if the SET-GROUP-ID is set
+	14. -r filename			True if the file is READABLE
+	15. -k filename			True if the STICKY BIT is set
+	16. -L filename			True if the file is a SYMBOLIC LINK
+	17. -p filename			True if the file is a NAMED PIPE
+	18. -O filename			True if the file exists and is owned by the effective USER ID

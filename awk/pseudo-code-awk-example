@@ -1,0 +1,6 @@
+$ awk 'pattern' filename
+$ awk '{ action }' filename
+$ awk 'pattern { action }' filename
+
+## Remember that you can have the pattern by itself, the action by itself,
+## or both a pattern and an action together.

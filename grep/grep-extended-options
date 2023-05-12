@@ -1,0 +1,18 @@
+##
+## New form for deprecated egrep command...
+##
+grep -E '2\.?[0-9]' numbers-sample-grep-file 
+grep -E '2\.+[0-9]' numbers-sample-grep-file 
+##
+## Won't work...EREs need to be escaped...
+##
+grep '2\.+[0-9]' numbers-sample-grep-file 
+grep '2\.?[0-9]' numbers-sample-grep-file 
+##
+## egrep (deprecated) version...
+##
+egrep '2\.+[0-9]' numbers-sample-grep-file 
+egrep '2\.?[0-9]' numbers-sample-grep-file 
+
+##
+## End of file...

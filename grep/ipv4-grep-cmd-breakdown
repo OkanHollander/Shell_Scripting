@@ -1,0 +1,16 @@
+##
+## Full Regular Expression...
+##
+((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])
+
+##
+## First block of expression...
+##
+((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.) -> Match 250-5 OR 20-4 OR 21 and a literal full stop "."
+
+{3,3} -> For the first grouping, a minimum of 3 and a maximum of 3...in other words: 3 octets.
+
+(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]) -> Match anything from 0-255 just like the one above.
+
+## 
+## End of file...

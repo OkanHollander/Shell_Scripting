@@ -1,0 +1,4 @@
+`s/^ *//`  => left trim
+`s/ *$//`  => right trim
+`/^$/d`    => remove empty line
+`/^\s*$/d` => delete lines which may contain white space
